@@ -1,0 +1,42 @@
+@import "ui-variables";
+
+// Pattern matching; ish is cray.
+// http://lesscss.org/#-pattern-matching-and-guard-expressions
+.text(normal) {
+  color: @text-color;
+  font-size: @font-size;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+.text(subtle) {
+  color: @text-color-subtle;
+  font-size: @font-size;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+.text(highlight) {
+  color: @text-color-highlight;
+  font-size: @font-size;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+.text(selected) {
+  .text(highlight)
+}
+
+.text(info) {
+  .text(highlight);
+  color: @text-color-info;
+}
+.text(success) {
+    .text(highlight);
+  color: @text-color-success;
+}
+.text(warning) {
+    .text(highlight);
+  color: @text-color-warning;
+}
+.text(error) {
+    .text(highlight);
+  color: @text-color-error;
+}

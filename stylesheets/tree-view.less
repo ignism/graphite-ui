@@ -1,0 +1,102 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+.tree-view {
+  .text(normal);
+  background-color: @tree-view-background-color;
+}
+
+.workspace { // specificity
+  .tree-view-resizer {
+    padding-top: @tab-bar-height;
+    background-color: @tab-bar-background-color;
+  }
+
+  .tree-view {
+    padding: 0;
+    border-right: 0;
+
+    // Special styling for the project directory
+    & > .directory > .header {
+      background-color: @tab-bar-background-color;
+      line-height: @tab-height;
+      height: @tab-height;
+      padding-left: 8px;
+      position: fixed;
+      width: 100%;
+      z-index: 1001;
+      margin-top: -@tab-height;
+      color: @text-color-highlight;
+      & .name {
+        font-weight: 400;
+      }
+    }
+
+    & .directory {
+      &.selected {
+        color: @text-color-selected;
+        &:before {
+          background-color: @background-color-selected;
+        }
+      }
+    }
+
+    .header.list-item {
+      transition: color 200ms linear, background 200ms linear;
+
+      &:hover {
+        color: @text-color-highlight;
+      }
+    }
+
+    .entry.list-item {
+      .text(normal);
+      transition: color 0.2s;
+
+      & > span, & > .name {
+        position: relative;
+        z-index: 2001;
+      }
+      &:before {
+        transition: color 200ms linear, background 200ms linear;
+        content: '';
+        position: absolute;
+        left: -100%;
+        right: 0;
+        height: 24px !important;
+        width: 200%;
+        z-index: 1003;
+      }
+      &:hover {
+        color: @text-color-highlight;
+        &:before {
+          background-color: @background-color-highlight;
+          left: -100%;
+          right: 0;
+          height: 24px !important;
+          width: 200%;
+        }
+      }
+
+      &.selected {
+        color: @text-color-selected;
+        &:before {
+          background-color: @background-color-selected;
+        }
+      }
+    }
+  }
+}
+
+.focusable-panel {
+  opacity: 1;
+
+  &:focus {
+    .selected > .name,
+    .selected > .name:before,
+    .selected > .list-item > .name,
+    .selected > .list-item > .name:before {
+      color: @text-color-selected !important;
+    }
+  }
+}

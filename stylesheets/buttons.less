@@ -1,0 +1,21 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+.btn {
+  transition: color 200ms linear, background 200ms linear;
+  border-bottom: 1px solid @base-background-color;
+  .text(normal);
+
+  &:hover {
+    .text(highlight);
+  }
+
+  &.selected {
+    background-color: @background-color-selected;
+    &:hover {
+      background-color: @background-color-selected;
+    }
+  }
+
+
+}

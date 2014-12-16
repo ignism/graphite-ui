@@ -1,0 +1,79 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+.tab-bar {
+  height: @tab-bar-height;
+  background: @tab-bar-background-color;
+  z-index: 1002;
+
+  .tab {
+    transition: color 200ms linear;
+    .text(normal);
+    height: @tab-height;
+    line-height: @tab-height;
+    margin-top: 8px;
+    background: @tab-background-color;
+
+    &:first-child {
+      padding-left: 8px;
+    }
+
+    &:hover {
+
+      .text(highlight);
+      .close-icon {
+        display: block;
+      }
+    }
+
+    &.modified:not(:hover) .close-icon {
+      display: block;
+      right: 12px;
+      top: 12px;
+      width: 8px;
+      height: 8px;
+      border-width: 1px;
+    }
+
+    .close-icon {
+      transition: color 200ms linear, background 200ms linear;
+      .text(normal);
+      position:absolute;
+      top:9px;
+      right:8px;
+      height:16px;
+      width:16px;
+      border-radius: 2px;
+      display: none;
+
+      &:before {
+        content:'✕';
+        position:absolute;
+        top: 2px;
+        right: 1px;
+        width:12px;
+        height:12px;
+      }
+
+      &:hover {
+        color: @text-color-highlight;
+        background-color: @app-background-color;
+      }
+    }
+  }
+
+  .tab.active {
+    .text(highlight);
+    background: @tab-background-color-active;
+    border-top-right-radius: @component-border-radius;
+    border-top-left-radius: @component-border-radius;
+
+    .close-icon {
+      display: block;
+      &:hover {
+        color: @text-color-highlight;
+        background-color: @tab-bar-background-color;
+      }
+    }
+  }
+}

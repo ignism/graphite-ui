@@ -1,0 +1,40 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+atom-panel.bottom {
+  background-color: @app-background-color;
+  .text(normal);
+}
+
+.items-view .editor {
+  background-color: #f00;
+  border-bottom-left-radius: @component-border-radius;
+  border-bottom-right-radius: @component-border-radius;
+}
+
+atom-panel.modal.overlay.from-top {
+  background-color: @tab-bar-background-color;
+  border-bottom-left-radius: @component-border-radius;
+  border-bottom-right-radius: @component-border-radius;
+  padding: @component-padding;
+  .select-list.command-palette {
+    background-color: @app-background-color;
+    border-bottom-left-radius: @component-border-radius;
+    border-bottom-right-radius: @component-border-radius;
+    .list-group {
+      .event {
+        .text(normal);
+        transition: color 200ms linear, background 200ms linear;
+        padding-left: 4px;
+        padding-right: 4px;
+        &:hover {
+          background-color: @background-color-highlight;
+          .text(highlight);
+        }
+        &.selected {
+          .text(highlight);
+        }
+      }
+    }
+  }
+}

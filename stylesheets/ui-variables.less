@@ -1,0 +1,96 @@
+@very-dark-gray: #1d1f21;
+@drak-gray: #2a2b2e;
+@gray: lighten(@very-dark-gray, 10%);
+
+@text-color: #aaa;
+@text-color-subtle: #555;
+@text-color-highlight: #fff;
+@text-color-selected: @text-color-highlight;
+
+@text-color-info: #5293d8;
+@text-color-success: #26c26a;
+@text-color-warning: #ff982d;
+@text-color-error: #c00;
+
+@text-color-ignored: @text-color-subtle;
+@text-color-added: @text-color-success;
+@text-color-renamed: @text-color-info;
+@text-color-modified: @text-color-warning;
+@text-color-removed: @text-color-error;
+
+@background-color-info: #0098ff;
+@background-color-success: #17ca65;
+@background-color-warning: #ffaa2c;
+@background-color-error: #c00;
+@background-color-highlight: @tab-bar-background-color;
+//@background-color-highlight: rgba(255, 255, 255, 0.12);
+@background-color-selected: #4182C4;
+
+//@app-background-color: lighten(@base-background-color, 4%);
+@app-background-color: #2a2b2e;
+
+@base-background-color: #1d1f21;
+@base-border-color: rgba(0, 0, 0, 0.5);
+
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: rgba(0, 0, 0, 0.5);
+
+@input-background-color: #212224;
+@input-border-color: @base-border-color;
+
+@tool-panel-background-color: #1d1f21;
+@tool-panel-border-color: @base-border-color;
+
+@inset-panel-background-color: #161719;
+@inset-panel-border-color: @base-border-color;
+
+@panel-heading-background-color: #43484d;
+@panel-heading-border-color: fadein(@base-border-color, 10%);
+@panel-background-color: lighten(@base-background-color, 10%);
+
+@overlay-background-color: #202123;
+@overlay-border-color: @background-color-highlight;
+
+@button-background-color: lighten(@base-background-color, 10%);
+@button-background-color-hover: lighten(@button-background-color, 5%);
+@button-background-color-selected: darken(@button-background-color, 5%);
+@button-border-color: @base-border-color;
+
+@tab-bar-background-color: lighten(@base-background-color, 10%);
+@tab-bar-border-color: @base-background-color;
+@tab-background-color: @tab-bar-background-color;
+@tab-background-color-active: @base-background-color;
+@tab-border-color: #484848;
+
+@tree-view-background-color: @app-background-color;
+@tree-view-border-color: @tool-panel-border-color;
+
+@scrollbar-color: @background-color-highlight;
+@scrollbar-background-color: rgba(0, 0, 0, 0.1);
+//@scrollbar-background-color: rgba(40, 41, 44, 0.5);
+//@scrollbar-color: rgba(88, 89, 91, 0.5);
+
+@ui-site-color-1: @background-color-success; // green
+@ui-site-color-2: @background-color-info; // blue
+@ui-site-color-3: @background-color-warning; // orange
+@ui-site-color-4: #db2ff4; // purple
+@ui-site-color-5: #f5e11d; // yellow
+
+// Sizes
+@font-size: 13px;
+@input-font-size: 13px;
+
+@disclosure-arrow-size: 12px;
+
+@component-padding: 8px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 25px;
+@component-border-radius: 4px;
+
+@tab-height: 32px;
+@tab-bar-height: 40px;
+
+// Other
+@font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+@font-family-code: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
