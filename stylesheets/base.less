@@ -48,12 +48,12 @@
   }
 
   .invisible-character {
-    .text(subtle);
+    color: @text-color-subtle;
   }
 
   .gutter {
     background-color: transparent !important;
-    .text(subtle);
+    color: @text-color-subtle;
 
     .line-number {
       height: 18px;
@@ -62,11 +62,11 @@
 
       &.cursor-line {
         background-color: transparent;
-        .text(highlight);
+        color: @text-color-highlight;
       }
 
       &.cursor-line-no-selection {
-        .text(highlight);
+        color: @text-color-highlight;
       }
     }
   }
@@ -98,15 +98,15 @@
     padding: 4px;
     li {
       &.selected {
-        .text(highlight);
+        color: @text-color-highlight;
       }
-      .text(normal);
+      color: @text-color;
       &:before {
         content: '';
         width: 100%;
       }
       &:hover {
-        .text(highlight);
+        color: @text-color-highlight;
       }
     }
   }
