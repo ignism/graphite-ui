@@ -22,9 +22,8 @@
 @background-color-success: #17ca65;
 @background-color-warning: #ffaa2c;
 @background-color-error: #c00;
-@background-color-highlight: @tab-bar-background-color;
+@background-color-highlight: lighten(@base-background-color, 10%);
 @background-color-selected: #4182C4;
-
 
 @app-background-color: #2a2b2e;
 
@@ -64,8 +63,8 @@
 @tree-view-background-color: @app-background-color;
 @tree-view-border-color: @tool-panel-border-color;
 
-@scrollbar-color: @background-color-highlight;
-@scrollbar-background-color: rgba(0, 0, 0, 0.1);
+@scrollbar-color: @button-background-color-hover;
+@scrollbar-background-color: rgba(0, 0, 0, 0.2);
 //@scrollbar-background-color: rgba(40, 41, 44, 0.5);
 //@scrollbar-color: rgba(88, 89, 91, 0.5);
 
@@ -92,4 +91,4 @@
 
 // Other
 @font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-@font-family-code: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+@font-family-code: 'Source Code Pro', monospace;

@@ -15,8 +15,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: @scrollbar-color;
+  background-color: @scrollbar-background-color;
   border-radius: @component-border-radius;
+  &:hover {
+    background: @scrollbar-color;
+  }
 }
 
 ::-webkit-scrollbar-corner {
@@ -27,6 +30,7 @@
 }
 .editor {
   background-color: @base-background-color;
+  -webkit-font-smoothing: antialiased;
 
   &.mini {
     background-color: @base-background-color;
@@ -78,9 +82,6 @@
     //color: @syntax-text-color;
   }
 
-  .cursor-line.line {
-    background-color: @app-background-color;
-  }
   .cursor {
     color: @text-color-highlight;
   }
