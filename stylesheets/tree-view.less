@@ -53,6 +53,12 @@
       .text(normal);
       transition: color 0.2s;
 
+      &.status-added { .text(info); }
+      &.status-ignored { .text(subtle); }
+      &.status-modified { .text(warning); }
+      &.status-removed { .text(error); }
+      &.status-renamed { .text(success); }
+
       & > span, & > .name {
         position: relative;
         z-index: 2001;
