@@ -7,7 +7,7 @@
   z-index: 1002;
 
   .tab {
-    transition: color 200ms linear;
+    transition: all 200ms linear;
     .text(normal);
     height: @tab-height;
     line-height: @tab-height;
@@ -66,6 +66,7 @@
 
   .tab.active {
     .text(highlight);
+    margin-left: 8px;
     background: @tab-background-color-active;
     border-top-right-radius: @component-border-radius;
     border-top-left-radius: @component-border-radius;
