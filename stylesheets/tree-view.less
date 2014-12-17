@@ -1,7 +1,7 @@
 @import "ui-variables";
 @import "ui-mixins";
 
-.tree-view {
+.tree-view, .tree-view-scroller {
   .text(normal);
   background-color: @tree-view-background-color;
 }
@@ -9,20 +9,22 @@
 .workspace { // specificity
   .tree-view-resizer {
     padding-top: @tab-bar-height;
-    background-color: @tab-bar-background-color;
+    background-color: @tree-view-background-color;
+    border-right: 1px solid @base-background-color;
   }
 
   .tree-view {
     padding: 0;
-    border-right: 0;
 
     // Special styling for the project directory
     & > .directory > .header {
       background-color: @tab-bar-background-color;
       line-height: @tab-height;
-      height: @tab-height;
+      height: @tab-height + 8px;
+      padding-top: 8px;
       padding-left: 8px;
       position: fixed;
+      top: @tab-height;
       width: 100%;
       z-index: 1001;
       margin-top: -@tab-height;
