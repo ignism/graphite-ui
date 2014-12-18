@@ -28,9 +28,14 @@
 .editor-contents {
   border-bottom-left-radius: @component-border-radius;
 }
+
 .editor {
   background-color: @base-background-color;
   -webkit-font-smoothing: antialiased;
+
+  .scroll-view {
+    padding: 0;
+  }
 
   &.mini {
     background-color: @base-background-color;
@@ -40,7 +45,7 @@
     line-height: 1.3em;
   }
   .wrap-guide {
-
+    background: @app-background-color;
   }
 
   .indent-guide {
@@ -48,39 +53,11 @@
   }
 
   .invisible-character {
-    color: @text-color-subtle;
-  }
-
-  .gutter {
-    background-color: transparent !important;
-    color: @text-color-subtle;
-
-    .line-number {
-      height: 18px;
-      padding-left: 8px;
-      padding-top: 1px;
-
-      &.cursor-line {
-        background-color: @background-color-selected;
-        color: @text-color-highlight;
-      }
-
-      &.cursor-line-no-selection {
-        background-color: transparent;
-        color: @text-color-highlight;
-      }
-    }
-  }
-
-
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after {
-    //color: @light-gray;
+    color: @app-background-color;
   }
 
   .invisible {
-    //color: @syntax-text-color;
+    color: @app-background-color;
   }
 
   .cursor {
@@ -89,6 +66,34 @@
 
   .selection .region {
     background-color: @syntax-color-selected;
+  }
+
+  .gutter {
+    background-color: @base-border-color !important;
+    color: @text-color-subtle;
+    border-right: 0;
+
+    .line-number {
+      height: 18px;
+      padding-left: 8px;
+      padding-top: 0px;
+
+      &.cursor-line {
+        background-color: @background-color-selected;
+        color: @text-color-highlight;
+      }
+
+      &.cursor-line-no-selection {
+        background-color: @base-background-color;
+        color: @text-color-highlight;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    //color: @light-gray;
   }
 }
 
