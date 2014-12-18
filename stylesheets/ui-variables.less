@@ -14,8 +14,8 @@
 
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
-@text-color-renamed: @text-color-info;
-@text-color-modified: @text-color-warning;
+@text-color-renamed: @text-color-warning;
+@text-color-modified: @text-color-info;
 @text-color-removed: @text-color-error;
 
 @background-color-info: #0098ff;
@@ -26,10 +26,10 @@
 @background-color-selected: #4182C4;
 
 @syntax-color-selected: fade(@background-color-selected, 30%);
-@app-background-color: #2a2b2e;
+@app-background-color: #2a2b2d;
 
 @base-background-color: #1d1f21;
-@base-border-color: rgba(0, 0, 0, 0.5);
+@base-border-color: lighten(@base-background-color, 2%);
 
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: rgba(0, 0, 0, 0.5);
@@ -55,7 +55,7 @@
 @button-background-color-selected: darken(@button-background-color, 5%);
 @button-border-color: @base-border-color;
 
-@tab-bar-background-color: lighten(@base-background-color, 10%);
+@tab-bar-background-color: @background-color-highlight;
 @tab-bar-border-color: @base-background-color;
 @tab-background-color: @tab-bar-background-color;
 @tab-background-color-active: @base-background-color;

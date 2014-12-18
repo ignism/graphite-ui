@@ -1,0 +1,119 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  transition: background 800ms linear;
+  background: transparent;
+  &:hover {
+    background: @scrollbar-background-color;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: @scrollbar-background-color;
+  border-radius: @component-border-radius;
+  &:hover {
+    background: @scrollbar-color;
+  }
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.editor-contents {
+  border-bottom-left-radius: @component-border-radius;
+}
+.editor {
+  background-color: @base-background-color;
+  -webkit-font-smoothing: antialiased;
+
+  .scroll-view {
+    padding: 0;
+  }
+
+  &.mini {
+    background-color: @base-background-color;
+    border-radius: @component-border-radius;
+    height: 28px;
+    padding: 4px;
+    line-height: 1.3em;
+  }
+  .wrap-guide {
+    background: @app-background-color;
+  }
+
+  .indent-guide {
+    color: @app-background-color;
+  }
+
+  .invisible-character {
+    color: @app-background-color;
+  }
+
+  .invisible {
+    color: @app-background-color;
+  }
+
+  .cursor {
+    color: @text-color-highlight;
+  }
+
+  .selection .region {
+    background-color: @syntax-color-selected;
+  }
+
+  .gutter {
+    background-color: @base-border-color !important;
+    color: @text-color-subtle;
+    border-right: 0;
+
+    .line-number {
+      height: 18px;
+      padding-left: 8px;
+      padding-top: 0px;
+
+      &.cursor-line {
+        background-color: @background-color-selected;
+        color: @text-color-highlight;
+      }
+
+      &.cursor-line-no-selection {
+        background-color: @base-background-color;
+        color: @text-color-highlight;
+      }
+    }
+  }
+
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    //color: @light-gray;
+  }
+}
+
+.select-list.popover-list {
+  background-color: @app-background-color;
+  border-radius: @component-border-radius;
+  ol.list-group {
+    padding: 4px;
+    li {
+      &.selected {
+        color: @text-color-highlight;
+      }
+      color: @text-color;
+      &:before {
+        content: '';
+        width: 100%;
+      }
+      &:hover {
+        color: @text-color-highlight;
+      }
+    }
+  }
+}

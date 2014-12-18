@@ -10,7 +10,7 @@
   .tree-view-resizer {
     padding-top: @tab-bar-height;
     background-color: @tree-view-background-color;
-    border-right: 1px solid @base-background-color;
+    border-right: 1px solid @base-border-color;
   }
 
   .tree-view {
@@ -35,6 +35,11 @@
     }
 
     & .directory {
+      &.status-added { .text(success); }
+      &.status-ignored { .text(subtle); }
+      &.status-modified { .text(info); }
+      &.status-removed { .text(error); }
+      &.status-renamed { .text(warning); }
       &.selected {
         //color: @text-color-selected;
         &:before {
@@ -57,9 +62,9 @@
 
       &.status-added { .text(success); }
       &.status-ignored { .text(subtle); }
-      &.status-modified { .text(warning); }
+      &.status-modified { .text(info); }
       &.status-removed { .text(error); }
-      &.status-renamed { .text(info); }
+      &.status-renamed { .text(warning); }
 
       & > span, & > .name {
         position: relative;
