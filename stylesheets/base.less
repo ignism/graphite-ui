@@ -102,17 +102,35 @@
   border-radius: @component-border-radius;
   ol.list-group {
     padding: 4px;
+
     li {
-      &.selected {
-        color: @text-color-highlight;
-      }
+      transition: color 200ms linear, background 200ms linear;
+      font-weight: normal;
+      font-size: 1em;
+      letter-spacing: 0;
       color: @text-color;
+
+      &.selected {
+        font-weight: normal;
+        font-size: 1em;
+        letter-spacing: 0;
+        color: @text-color-highlight;
+        &:before {
+          background-color: @background-color-selected;
+        }
+      }
+
       &:before {
+        transition: color 200ms linear, background-color 200ms linear;
         content: '';
         width: 100%;
+        background-color: @app-background-color;
       }
       &:hover {
         color: @text-color-highlight;
+        &:before {
+          background-color: @background-color-highlight;
+        }
       }
     }
   }
