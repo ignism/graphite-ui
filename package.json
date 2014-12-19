@@ -7,7 +7,7 @@
   "activationCommands": {
     "atom-workspace": "graphite-ui:toggle"
   },
-  "repository": "https://github.com/atom/graphite-ui",
+  "repository": "https://github.com/ignism/graphite-ui",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

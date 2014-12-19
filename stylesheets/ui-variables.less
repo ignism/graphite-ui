@@ -22,7 +22,7 @@
 @background-color-success: #17ca65;
 @background-color-warning: #ffaa2c;
 @background-color-error: #c00;
-@background-color-highlight: lighten(@base-background-color, 10%);
+@background-color-highlight: lighten(@base-background-color, 12%);
 @background-color-selected: #4182C4;
 
 @syntax-color-selected: fade(@background-color-selected, 30%);
@@ -50,7 +50,7 @@
 @overlay-background-color: #202123;
 @overlay-border-color: @background-color-highlight;
 
-@button-background-color: lighten(@base-background-color, 10%);
+@button-background-color: @background-color-highlight;
 @button-background-color-hover: lighten(@button-background-color, 5%);
 @button-background-color-selected: darken(@button-background-color, 5%);
 @button-border-color: @base-border-color;
