@@ -5,7 +5,9 @@
   border-bottom-left-radius: @component-border-radius;
 }
 
-.editor {
+
+
+.editor, :host, atom-text-editor::shadow, atom-text-editor {
   background-color: @base-background-color;
   -webkit-font-smoothing: antialiased;
 
@@ -50,13 +52,13 @@
     border-right: 0;
 
     .line-number {
-      height: 18px;
+      background-color: @base-border-color !important;
       padding-left: 8px;
       padding-top: 0px;
 
       &.cursor-line {
-        background-color: @background-color-selected;
-        color: @text-color-highlight;
+        background-color: @background-color-selected !important;
+        color: @text-color-highlight !important;
       }
 
       &.cursor-line-no-selection {
