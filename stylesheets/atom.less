@@ -24,3 +24,27 @@ body {
   text-shadow: 0 2px @base-background-color;
   font-size: 0.5em;
 }
+
+.scrollbars-visible-always {
+  /deep/ ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /deep/ ::-webkit-scrollbar-track,
+  /deep/ ::-webkit-scrollbar-corner {
+    transition: background 800ms linear;
+    background: transparent;
+    &:hover {
+      background: @scrollbar-background-color;
+    }
+  }
+
+  /deep/ ::-webkit-scrollbar-thumb {
+    background-color: @scrollbar-background-color;
+    border-radius: @component-border-radius;
+    &:hover {
+      background: @scrollbar-color;
+    }
+  }
+}
