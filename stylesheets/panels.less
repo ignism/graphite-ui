@@ -12,18 +12,24 @@ atom-panel.bottom {
   border-bottom-right-radius: @component-border-radius;
 }
 
-atom-panel.modal.overlay.from-top {
+atom-panel.modal {
   background-color: @tab-bar-background-color;
   border-bottom-left-radius: @component-border-radius;
   border-bottom-right-radius: @component-border-radius;
   padding: @component-padding;
-  .select-list.command-palette {
-    background-color: @app-background-color;
-    border-bottom-left-radius: @component-border-radius;
-    border-bottom-right-radius: @component-border-radius;
+}
+
+atom-panel.modal.overlay {
+  .select-list {
+    background-color: @tab-bar-background-color;
+    border-radius: @component-border-radius;
+    padding: 0;
+
     .list-group {
+      background-color: @app-background-color;
       transition: color 200ms linear, background 200ms linear;
-      .event {
+      border-radius: @component-border-radius;
+      li {
         .text(normal);
         transition: color 200ms linear, background 200ms linear;
         padding-left: 4px;
@@ -36,6 +42,35 @@ atom-panel.modal.overlay.from-top {
           background-color: @background-color-selected;
           .text(highlight);
         }
+      }
+    }
+  }
+}
+
+// git-plus fix
+.git-palette.select-list {
+  border: 8px solid @tab-bar-background-color;
+  background-color: @tab-bar-background-color;
+  border-bottom-left-radius: @component-border-radius;
+  border-bottom-right-radius: @component-border-radius;
+  padding: 0;
+
+  .list-group {
+    background-color: @app-background-color;
+    transition: color 200ms linear, background 200ms linear;
+    border-radius: @component-border-radius;
+    li {
+      .text(normal);
+      transition: color 200ms linear, background 200ms linear;
+      padding-left: 4px;
+      padding-right: 4px;
+      &:hover {
+        background-color: @background-color-highlight;
+        .text(highlight);
+      }
+      &.selected {
+        background-color: @background-color-selected;
+        .text(highlight);
       }
     }
   }
