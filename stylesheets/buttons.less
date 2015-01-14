@@ -10,14 +10,14 @@
     .text(highlight);
   }
 
-  &.disabled {
-    color: @base-background-color;
-  }
-
   &.selected {
     background-color: @background-color-selected;
     &:hover {
       background-color: @background-color-selected;
     }
   }
+}
+
+button:disabled {
+  color: @base-background-color;
 }
