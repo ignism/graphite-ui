@@ -22,7 +22,7 @@
 @background-color-success: #17ca65;
 @background-color-warning: #ffaa2c;
 @background-color-error: #c00;
-@background-color-highlight: lighten(@base-background-color, 12%);
+@background-color-highlight: lighten(@base-background-color, 16%);
 @background-color-selected: #4182C4;
 
 @syntax-color-selected: fade(@background-color-selected, 30%);
@@ -49,14 +49,14 @@
 @panel-background-color: lighten(@base-background-color, 10%);
 
 @overlay-background-color: #202123;
-@overlay-border-color: @background-color-highlight;
+@overlay-border-color: lighten(@base-background-color, 12%);
 
-@button-background-color: @background-color-highlight;
+@button-background-color: lighten(@base-background-color, 12%);
 @button-background-color-hover: lighten(@button-background-color, 5%);
 @button-background-color-selected: darken(@button-background-color, 5%);
 @button-border-color: @base-border-color;
 
-@tab-bar-background-color: @background-color-highlight;
+@tab-bar-background-color: lighten(@base-background-color, 12%);
 @tab-bar-border-color: @base-background-color;
 @tab-background-color: @tab-bar-background-color;
 @tab-background-color-active: @base-background-color;
