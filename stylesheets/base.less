@@ -5,7 +5,15 @@
   border-bottom-left-radius: @component-border-radius;
 }
 
-.editor, :host, atom-text-editor::shadow, atom-text-editor {
+atom-text-editor[mini] {
+  background-color: @base-background-color;
+  border-radius: @component-border-radius;
+  height: 28px;
+  padding: 4px;
+  line-height: 1.3em;
+}
+
+:host, atom-text-editor, atom-text-editor::shadow {
   background-color: @base-background-color;
   -webkit-font-smoothing: antialiased;
 
@@ -13,13 +21,6 @@
     padding: 0;
   }
 
-  &.mini {
-    background-color: @base-background-color;
-    border-radius: @component-border-radius;
-    height: 28px;
-    padding: 4px;
-    line-height: 1.3em;
-  }
   .wrap-guide {
     background: @app-background-color;
   }
