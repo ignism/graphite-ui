@@ -10,7 +10,7 @@ module.exports =
       else
         fs.writeFileSync varsPath, "@import \"colors\";\n"
 
-    atom.workspaceView.ready ->
+    atom.workspace.onDidOpen ->
       applySyntaxThemeColoring(atom.config.get('graphite-ui.syntaxThemeColoring'))
 
     atom.config.onDidChange 'graphite-ui.syntaxThemeColoring', ->

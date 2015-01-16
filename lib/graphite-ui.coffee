@@ -6,6 +6,6 @@ module.exports =
       default: false
 
   activate: (state) ->
-    atom.workspaceView.ready ->
+    atom.workspace.onDidOpen ->
       Config = require './config'
       Config.apply()
