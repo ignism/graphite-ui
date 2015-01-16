@@ -1,17 +1,16 @@
-@very-dark-gray: #1d1f21;
-@drak-gray: #2a2b2e;
-@gray: lighten(@very-dark-gray, 10%);
+@import "syntax-variables";
+@import "config.less";
 
-@text-color: #aaa;
-@text-color-subtle: #555;
-@text-color-highlight: #fff;
-@text-color-selected: @text-color-highlight;
+@background-shade-one: @theme-color;
+@background-shade-two: lighten(@background-shade-one, 3%);
+@background-shade-three: lighten(@background-shade-one, 6%);
+@background-shade-four: lighten(@background-shade-one, 12%);
+@background-shade-five: lighten(@background-shade-one, 18%);
 
 @text-color-info: #5293d8;
 @text-color-success: #26c26a;
 @text-color-warning: #ff982d;
 @text-color-error: #c00;
-
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
 @text-color-renamed: @text-color-warning;
@@ -22,48 +21,48 @@
 @background-color-success: #17ca65;
 @background-color-warning: #ffaa2c;
 @background-color-error: #c00;
-@background-color-highlight: lighten(@base-background-color, 16%);
+@background-color-highlight: @background-shade-five;
 @background-color-selected: #4182C4;
 
 @syntax-color-selected: fade(@background-color-selected, 30%);
-@app-background-color: #2a2b2d;
 
-@base-background-color: #1d1f21;
-@base-border-color: lighten(@base-background-color, 2%);
+@base-background-color: @background-shade-one;
+@base-border-color: @background-shade-two;
+@app-background-color: @background-shade-three;
 
-@pane-item-background-color: @base-background-color;
+@pane-item-background-color: @background-shade-one;
 @pane-item-border-color: rgba(0, 0, 0, 0.5);
 
-@input-background-color: #212224;
+@input-background-color: @base-background-color;
 @input-border-color: @base-border-color;
 
-@tool-panel-background-color: #1d1f21;
+@tool-panel-background-color: @base-background-color;
 @tool-panel-border-color: @base-border-color;
 @tooltip-background-color: @background-color-selected;
 
-@inset-panel-background-color: #161719;
+@inset-panel-background-color: @base-background-color;
 @inset-panel-border-color: @base-border-color;
 
 @panel-heading-background-color: #43484d;
 @panel-heading-border-color: fadein(@base-border-color, 10%);
 @panel-background-color: lighten(@base-background-color, 10%);
 
-@overlay-background-color: #202123;
+@overlay-background-color: @base-background-color;
 @overlay-border-color: lighten(@base-background-color, 12%);
 
-@button-background-color: lighten(@base-background-color, 12%);
-@button-background-color-hover: lighten(@button-background-color, 5%);
+@button-background-color: @background-shade-four;
+@button-background-color-hover: @background-shade-five;
 @button-background-color-selected: darken(@button-background-color, 5%);
 @button-border-color: @base-border-color;
 
-@tab-bar-background-color: lighten(@base-background-color, 12%);
+@tab-bar-background-color: @background-shade-four;
 @tab-bar-border-color: @base-background-color;
 @tab-background-color: @tab-bar-background-color;
 @tab-background-color-active: @base-background-color;
-@tab-border-color: #484848;
+@tab-border-color: transparent;
 
 @tree-view-background-color: @app-background-color;
-@tree-view-border-color: @tool-panel-border-color;
+@tree-view-border-color: @base-background-color;
 
 @scrollbar-color: rgba(0, 0, 0, 0.4);
 @scrollbar-background-color: rgba(0, 0, 0, 0.2);
