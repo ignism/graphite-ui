@@ -6,15 +6,66 @@
   border-bottom: 1px solid @base-background-color;
   .text(normal);
 
-  &:hover {
-    .text(highlight);
-  }
-
   &.selected {
     background-color: @background-color-selected;
+  }
+
+  &.btn-primary {
+    .text(normal);
     &:hover {
-      background-color: @background-color-selected;
+      border-color: @button-border-color;
     }
+    &.selected {
+      background-color: @background-color-selected;
+      .text(highlight);
+    }
+  }
+  &.btn-info {
+    .text(info);
+    &:hover {
+      border-color: @text-color-info;
+    }
+    &.selected {
+      background-color: @background-color-info;
+      .text(highlight);
+    }
+  }
+  &.btn-success {
+    .text(success);
+    &:hover {
+      border-color: @text-color-success;
+    }
+    &.selected {
+      background-color: @background-color-success;
+      .text(highlight);
+    }
+  }
+  &.btn-warning {
+    .text(warning);
+    &:hover {
+      border-color: @text-color-warning;
+    }
+    &.selected {
+      background-color: @background-color-warning;
+      .text(highlight);
+    }
+  }
+  &.btn-error {
+    .text(error);
+    &:hover {
+      border-color: @text-color-error;
+    }
+    &.selected {
+      background-color: @background-color-error;
+      .text(highlight);
+      &:hover {
+        border: 0 !important;
+      }
+    }
+  }
+
+  &:hover {
+    .text(highlight);
   }
 }
 
