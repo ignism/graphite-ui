@@ -1,5 +1,23 @@
+@import "ui-variables";
+
 .settings-view {
   .section-container {
     max-width: 64em;
+  }
+
+  .section:first-of-type {
+    border-top: 0;
+  }
+
+  .config-menu {
+    background-color: @base-border-color;
+  }
+
+  .sub-section .row div {
+    background-color: @base-border-color;
+  }
+
+  atom-text-editor {
+    background-color: @app-background-color !important;
   }
 }
