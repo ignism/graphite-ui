@@ -9,4 +9,4 @@ Shown below with the [file-icons](https://github.com/DanBrooker/file-icons) and 
 ### New feature
 Now has an option in the settings view to use colors from the current syntax theme as a base for the UI theme.
 
-![graphite](http://i.imgur.com/NQ2FvH9.jpg)
+![graphite](http://i.imgur.com/mdZEA31.jpg)
