@@ -6,7 +6,5 @@ Shown below with the [file-icons](https://github.com/DanBrooker/file-icons) and 
 
 ![graphite](http://i.imgur.com/fNfInqr.jpg)
 
-### New feature
-Now has an option in the settings view to use colors from the current syntax theme as a base for the UI theme.
-
-![graphite](http://i.imgur.com/mdZEA31.jpg)
+### Note
+I removed the option for syntax coloring. I thought it was better to make a specific theme for it. If you want to check it out, look up Polymorph.
