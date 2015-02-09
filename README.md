@@ -7,4 +7,4 @@ Shown below with the [file-icons](https://github.com/DanBrooker/file-icons) and 
 ![graphite](http://i.imgur.com/fNfInqr.jpg)
 
 ### Note
-I removed the option for syntax coloring. I thought it was better to make a specific theme for it. If you want to check it out, look up Polymorph.
+I removed the option for syntax coloring. I thought it was better to make a specific theme for it. If you want to check it out, look up [polymorph-ui](https://github.com/ignism/polymorph-ui)
