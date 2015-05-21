@@ -2,7 +2,7 @@
   "name": "graphite-ui",
   "theme": "ui",
   "main": "./lib/graphite-ui",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "description": "A solid and minimal UI",
   "activationCommands": {
     "atom-workspace": "graphite-ui:toggle"
